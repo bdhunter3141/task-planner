@@ -6,7 +6,7 @@ A task management application with an interesting login screen. Designed to be f
 
 1. Fork & Clone
 2. Run NPM install to install dependencies
-3. Create a .env file and add your password: `REACT_APP_PASSWORD=NOW!`
+3. Create a .env file in the root of the project and add your password: `REACT_APP_PASSWORD=NOW!`
 4. Run 'npm start' to start the development server
 5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 6. Sign in using your password. Hint: It's "NOW!"

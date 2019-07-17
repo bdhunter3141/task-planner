@@ -5,7 +5,16 @@ const Tasks = ({ tasks, finishTask }) => {
     tasks.map(task => {
       return (
         <div className="collection-item" key={task.id}>
-          <span onClick={() => finishTask(task.id)}>{ task.complete ? <i className='far fa-check-square'></i> : <i className='far fa-square'></i>}</span> <span>{task.content}</span>
+          <span onClick={() => finishTask(task.id)}>
+            {task.complete ? (
+              <i className="far fa-check-square" />
+            ) : (
+              <i className="far fa-square" />
+            )}{" "}
+            <span className={task.complete ? "finished-task" : ""}>
+              {task.content}
+            </span>
+          </span>
         </div>
       );
     })
@@ -13,9 +22,7 @@ const Tasks = ({ tasks, finishTask }) => {
     <p className="center">No Tasks Yet!</p>
   );
 
-  return <div className="tasks collection">
-  {taskList}
-  </div>;
+  return <div className="tasks collection">{taskList}</div>;
 };
 
 export default Tasks;
